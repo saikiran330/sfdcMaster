@@ -1,0 +1,23 @@
+<apex:page standardController="Lead" extensions="getGeolocationController">
+<apex:form >
+<apex:pageMessages ></apex:pageMessages>
+<apex:pageblock title="Lead Information">
+<apex:pageBlockSection >
+<apex:inputField value="{!leadRec.firstname}"/>
+<apex:inputField value="{!leadRec.lastname}"/>
+<apex:inputField value="{!leadRec.postalcode}"/>
+<apex:inputField value="{!leadRec.company}"/>
+<apex:inputField value="{!leadRec.phone}"/>
+<apex:inputField value="{!leadRec.Business_Development_Rep__c}"/>
+<apex:outputField value="{!leadRec.longitude__c}"/>
+<apex:outputField value="{!leadRec.latitude__c}"/>
+<apex:outputField value="{!leadRec.geo__Longitude__s}"/>
+<apex:outputField value="{!leadRec.geo__latitude__s }"/>
+</apex:pageBlockSection>
+<apex:pageBlockButtons location="Both">
+<apex:commandButton action="{!submit}" value="Save"/>
+<apex:commandButton action="{!Cancel}" value="Cancel"/>
+</apex:pageBlockButtons>
+</apex:pageblock>
+</apex:form>
+</apex:page>
